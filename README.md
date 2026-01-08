@@ -1,6 +1,6 @@
 # Google Hotels Scraper
 
-[![Promo](https://github.com/luminati-io/LinkedIn-Scraper/blob/main/Proxies%20and%20scrapers%20GitHub%20bonus%20banner.png)](https://brightdata.co.kr/products/serp-api/google-search/hotels)
+[![Promo](https://github.com/bright-kr/LinkedIn-Scraper/blob/main/Proxies%20and%20scrapers%20GitHub%20bonus%20banner.png)](https://brightdata.co.kr/products/serp-api/google-search/hotels)
 
 Google은 가장 큰 여행 데이터 집계 서비스 중 하나이며, 여기에서 실시간 호텔 데이터를 スクレイピング하는 방법을 안내합니다. 두 가지 방법을 다룹니다:
 
@@ -31,7 +31,7 @@ Google은 가장 큰 여행 데이터 집계 서비스 중 하나이며, 여기�
 
 소규모로 Google Hotels 데이터를 추출하기 위한 빠르고 간단한 스크레이퍼입니다.
 
-<img width="800" alt="free-google-hotels-scraper" src="https://github.com/luminati-io/google-hotels-api/blob/main/images/421713152-9e86aabe-c8b7-4286-946a-378cd98c81b3.png" />
+<img width="800" alt="free-google-hotels-scraper" src="https://github.com/bright-kr/google-hotels-api/blob/main/images/421713152-9e86aabe-c8b7-4286-946a-378cd98c81b3.png" />
 
 ### Setup
 
@@ -51,7 +51,7 @@ pip install pandas tqdm selenium beautifulsoup4 webdriver-manager
 **참고**: Webスクレイピング이 처음이시라면, [초보자를 위한 Python web scraping 튜토리얼](https://brightdata.co.kr/blog/how-tos/web-scraping-with-python) 또는 [Selenium으로 Web Scraping 하는 방법 가이드](https://brightdata.co.kr/blog/how-tos/using-selenium-for-web-scraping)부터 시작하시는 것을 권장합니다.
 
 ### **Usage**
-필수 파라미터와 함께 [google-hotels-scraper.py](https://github.com/luminati-io/google-hotels-api/blob/main/google-hotels-scraper/google-hotels-scraper.py) 스크립트를 실행합니다:
+필수 파라미터와 함께 [google-hotels-scraper.py](https://github.com/bright-kr/google-hotels-api/blob/main/google-hotels-scraper/google-hotels-scraper.py) 스크립트를 실행합니다:
 ```bash
 python3 google-hotels-scraper.py --location "Dubai" --max_hotels 200
 ```
@@ -62,7 +62,7 @@ _파라미터:_
 💡 **Pro Tip:** Google의 スクレイピング 방지 시스템(アンチボット)에 의한 탐지를 줄이려면, 스크립트에서 `options.add_argument("--headless=new")` 라인을 주석 처리하십시오.
 
 ### Sample Output
-<img width="800" alt="google-hotels-scraper-csv-output" src="https://github.com/luminati-io/google-hotels-api/blob/main/images/421731827-633afbf9-204e-444a-ac0f-23b8b72c5813.png" />
+<img width="800" alt="google-hotels-scraper-csv-output" src="https://github.com/bright-kr/google-hotels-api/blob/main/images/421731827-633afbf9-204e-444a-ac0f-23b8b72c5813.png" />
 
 
 ### Limitations
@@ -94,7 +94,7 @@ _파라미터:_
 
 1. [Bright Data account](https://brightdata.co.kr/)를 생성합니다(신규 사용자는 $5 크레딧 제공)
 2. [API key](https://docs.brightdata.com/general/account/api-token)를 생성합니다
-3. [단계별 가이드](https://github.com/luminati-io/google-hotels-api/blob/main/setup-serp-api-guide.md)를 따라 SERP API 및 접근 자격 증명을 구성합니다
+3. [단계별 가이드](https://github.com/bright-kr/google-hotels-api/blob/main/setup-serp-api-guide.md)를 따라 SERP API 및 접근 자격 증명을 구성합니다
 4. Google Hotels API를 사용하려면 쿼리하려는 호텔의 entity ID가 필요합니다. 다음과 같이 찾을 수 있습니다:
 	1. Google에서 호텔 이름을 검색합니다
 	2. 마우스 오른쪽 버튼을 클릭하고 "View page source"를 선택합니다
@@ -140,7 +140,7 @@ with open("serp-direct-api.json", "w") as file:
 print("Response saved to 'serp-direct-api.json'.")
 ```
 
-👉 [전체 JSON 출력](https://github.com/luminati-io/google-hotels-api/blob/main/google-hotels-api-results/serp-direct-api.json)을 확인하십시오.
+👉 [전체 JSON 출력](https://github.com/bright-kr/google-hotels-api/blob/main/google-hotels-api-results/serp-direct-api.json)을 확인하십시오.
 
 **참고:** 파싱된 JSON에는 `brd_json=1`을, 파싱된 JSON + 전체 중첩 HTML에는 `brd_json=html`을 사용하십시오.
 
@@ -182,7 +182,7 @@ with open("serp-native-proxy.html", "w", encoding="utf-8") as file:
 print("Response saved to 'serp-native-proxy.html'.")
 ```
 
-👉 [전체 JSON 출력](https://github.com/luminati-io/Google-Hotels-API/blob/main/google-hotels-api-results/serp-native-proxy.html)을 확인하십시오.
+👉 [전체 JSON 출력](https://github.com/bright-kr/Google-Hotels-API/blob/main/google-hotels-api-results/serp-native-proxy.html)을 확인하십시오.
 
 **참고:** 프로덕션 환경에서는 [SSL Certificate Guide](https://docs.brightdata.com/general/account/ssl-certificate)에 설명된 대로 Bright Data의 SSL 인증서를 로드하십시오.
 
@@ -192,7 +192,7 @@ Bright Data의 API는 Google Hotels 데이터 추출을 세밀하게 조정하�
 
 ### Localization Parameters
 
-<img width="800" alt="bright-data-google-hotels-scraper-api-localization" src="https://github.com/luminati-io/google-hotels-api/blob/main/images/422299775-d47254c1-0c7f-4572-bf54-f3f55cf66908.png" />
+<img width="800" alt="bright-data-google-hotels-scraper-api-localization" src="https://github.com/bright-kr/google-hotels-api/blob/main/images/422299775-d47254c1-0c7f-4572-bf54-f3f55cf66908.png" />
 
 
 이 파라미터는 검색의 국가와 언어를 정의합니다:
@@ -211,7 +211,7 @@ curl --proxy brd.superproxy.io:33335 --proxy-user brd-customer-<customer-id>-zon
 
 ### Booking Parameters
 
-<img width="800" alt="bright-data-google-hotels-scraper-api-booking-params" src="https://github.com/luminati-io/google-hotels-api/blob/main/images/422303757-74faadf7-218b-4fa3-b2d9-d0cecf8e23e6.png" />
+<img width="800" alt="bright-data-google-hotels-scraper-api-booking-params" src="https://github.com/bright-kr/google-hotels-api/blob/main/images/422303757-74faadf7-218b-4fa3-b2d9-d0cecf8e23e6.png" />
 
 이 파라미터는 날짜, 투숙객 수, 무료 취소 가능 여부, 숙소 유형에 따라 결과를 정교하게 필터링하는 데 도움이 됩니다:
 
@@ -286,12 +286,12 @@ curl --proxy brd.superproxy.io:33335 --proxy-user brd-customer-<customer-id>-zon
 
 - **Documentation**: [SERP API Docs](https://docs.brightdata.com/scraping-automation/serp-api/)
 - **Explore Related Guides**: 
-  - [Web Unlocker API](https://github.com/luminati-io/web-unlocker-api)
-  - [SERP API](https://github.com/luminati-io/serp-api)
-  - [Google Search API](https://github.com/luminati-io/google-search-api)
-  - [Google News Scraper](https://github.com/luminati-io/Google-News-Scraper)
-  - [Google Trends API](https://github.com/luminati-io/google-trends-api)
-  - [Google Reviews API](https://github.com/luminati-io/google-reviews-api)
+  - [Web Unlocker API](https://github.com/bright-kr/web-unlocker-api)
+  - [SERP API](https://github.com/bright-kr/serp-api)
+  - [Google Search API](https://github.com/bright-kr/google-search-api)
+  - [Google News Scraper](https://github.com/bright-kr/Google-News-Scraper)
+  - [Google Trends API](https://github.com/bright-kr/google-trends-api)
+  - [Google Reviews API](https://github.com/bright-kr/google-reviews-api)
 - **Helpful Articles**:
   - [Best SERP APIs](https://brightdata.co.kr/blog/web-data/best-serp-apis)
   - [Build a RAG Chatbot with SERP API](https://brightdata.co.kr/blog/web-data/build-a-rag-chatbot)
