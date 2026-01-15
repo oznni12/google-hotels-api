@@ -2,7 +2,7 @@
 
 [![Promo](https://github.com/bright-kr/LinkedIn-Scraper/blob/main/Proxies%20and%20scrapers%20GitHub%20bonus%20banner.png)](https://brightdata.co.kr/products/serp-api/google-search/hotels)
 
-Google은 가장 큰 여행 데이터 집계 서비스 중 하나이며, 여기에서 실시간 호텔 데이터를 スクレイピング하는 방법을 안내합니다. 두 가지 방법을 다룹니다:
+Google은 가장 큰 여행 데이터 집계 서비스 중 하나이며, 여기에서 실시간 호텔 데이터를 스크레이핑하는 방법을 안내합니다. 두 가지 방법을 다룹니다:
 
 1. **무료 스크레이퍼**: 소규모 요구 사항에 이상적입니다.
 2. **Bright Data Google Hotels API**: 단일 API 호출로 대규모로 공개 Google Hotels 데이터를 수집하기 위한 엔터프라이즈급 솔루션입니다([SERP Scraping API](https://brightdata.co.kr/products/serp-api)의 일부).
@@ -48,7 +48,7 @@ Google은 가장 큰 여행 데이터 집계 서비스 중 하나이며, 여기�
 pip install pandas tqdm selenium beautifulsoup4 webdriver-manager
 ```
 
-**참고**: Webスクレイピング이 처음이시라면, [초보자를 위한 Python web scraping 튜토리얼](https://brightdata.co.kr/blog/how-tos/web-scraping-with-python) 또는 [Selenium으로 Web Scraping 하는 방법 가이드](https://brightdata.co.kr/blog/how-tos/using-selenium-for-web-scraping)부터 시작하시는 것을 권장합니다.
+**참고**: Web스크레이핑이 처음이시라면, [초보자를 위한 Python web scraping 튜토리얼](https://brightdata.co.kr/blog/how-tos/web-scraping-with-python) 또는 [Selenium으로 Web Scraping 하는 방법 가이드](https://brightdata.co.kr/blog/how-tos/using-selenium-for-web-scraping)부터 시작하시는 것을 권장합니다.
 
 ### **Usage**
 필수 파라미터와 함께 [google-hotels-scraper.py](https://github.com/bright-kr/google-hotels-api/blob/main/google-hotels-scraper/google-hotels-scraper.py) 스크립트를 실행합니다:
@@ -57,9 +57,9 @@ python3 google-hotels-scraper.py --location "Dubai" --max_hotels 200
 ```
 _파라미터:_
 - `location` – 호텔 데이터의 대상 위치
-- `max_hotels` – スクレイピング할 호텔 수
+- `max_hotels` – 스크레이핑할 호텔 수
 
-💡 **Pro Tip:** Google의 スクレイピング 방지 시스템(アンチボット)에 의한 탐지를 줄이려면, 스크립트에서 `options.add_argument("--headless=new")` 라인을 주석 처리하십시오.
+💡 **Pro Tip:** Google의 스크레이핑 방지 시스템(안티봇)에 의한 탐지를 줄이려면, 스크립트에서 `options.add_argument("--headless=new")` 라인을 주석 처리하십시오.
 
 ### Sample Output
 <img width="800" alt="google-hotels-scraper-csv-output" src="https://github.com/bright-kr/google-hotels-api/blob/main/images/421731827-633afbf9-204e-444a-ac0f-23b8b72c5813.png" />
@@ -69,24 +69,24 @@ _파라미터:_
 
 무료 스크레이퍼에는 여러 제약 사항이 있습니다:
 
-- IPアドレス 차단 위험이 높습니다
-- リクエスト 볼륨이 제한됩니다
+- IP 주소 차단 위험이 높습니다
+- 요청 볼륨이 제한됩니다
 - CAPTCHA가 자주 발생합니다
-- 대규모 スクレイピング에는 신뢰성이 떨어집니다
+- 대규모 스크레이핑에는 신뢰성이 떨어집니다
 
 더 크고 신뢰할 수 있는 데이터 수집을 위해 아래의 Bright Data 전용 솔루션을 고려해 보십시오 👇
 
 
 ## Bright Data Google Hotels API
-[Bright Data의 Google Hotels API](https://brightdata.co.kr/products/serp-api/google-search/hotels)는 [SERP Scraping API](https://brightdata.co.kr/products/serp-api)의 일부이며, 고급 [proxy network](https://brightdata.co.kr/proxy-types)를 사용합니다. 이를 통해 CAPTCHA나 IPアドレス 차단을 걱정하지 않고 공개 Google Hotels 데이터를 대규모로 수집할 수 있습니다.
+[Bright Data의 Google Hotels API](https://brightdata.co.kr/products/serp-api/google-search/hotels)는 [SERP Scraping API](https://brightdata.co.kr/products/serp-api)의 일부이며, 고급 [proxy network](https://brightdata.co.kr/proxy-types)를 사용합니다. 이를 통해 CAPTCHA나 IP 주소 차단을 걱정하지 않고 공개 Google Hotels 데이터를 대규모로 수집할 수 있습니다.
 
 ### Key Features
 - **글로벌 위치 정확도**: 특정 위치에 맞추어 결과를 조정합니다
-- **성공 기준 과금 모델**: 성공한 リクエスト에 대해서만 비용을 지불합니다
+- **성공 기준 과금 모델**: 성공한 요청에 대해서만 비용을 지불합니다
 - **실시간 데이터**: 최신 호텔 정보를 수 초 내로 가져옵니다
-- **확장성**: 볼륨 제한 없이 무제한 リクエスト를 처리합니다
+- **확장성**: 볼륨 제한 없이 무제한 요청를 처리합니다
 - **비용 효율성**: 인프라 및 유지보수 비용을 절감합니다
-- **높은 신뢰성**: 내장된 차단 방지(アンチボット) 조치로 일관된 성능을 제공합니다
+- **높은 신뢰성**: 내장된 차단 방지(안티봇) 조치로 일관된 성능을 제공합니다
 - **24/7 지원**: 필요할 때 언제든 전문가의 도움을 받을 수 있습니다
 
 
@@ -102,7 +102,7 @@ _파라미터:_
 
 ### Direct API Access
 
-API エンドポイント로 직접 リクエスト를 보냅니다.
+API 엔드포인트로 직접 요청를 보냅니다.
 
 **cURL Example:**
 
@@ -146,7 +146,7 @@ print("Response saved to 'serp-direct-api.json'.")
 
 ### Native Proxy-Based Access
 
-Bright Data의 プロキシ 라우팅 방식도 사용할 수 있습니다:
+Bright Data의 프록시 라우팅 방식도 사용할 수 있습니다:
 
 **cURL Example:**
 
@@ -237,7 +237,7 @@ curl --proxy brd.superproxy.io:33335 \
 
 
 ### Device Type Parameters
-기본적으로 リクエスト는 데스크톱 user-agent를 모방하지만, 모바일로 변경할 수 있습니다:
+기본적으로 요청는 데스크톱 user-agent를 모방하지만, 모바일로 변경할 수 있습니다:
 
 | Parameter | Description | 
 |-----------|-------------|
@@ -256,11 +256,11 @@ curl --proxy brd.superproxy.io:33335 --proxy-user brd-customer-<customer-id>-zon
 ```
 
 ### Response Format
-기본적으로 レスポンス는 HTML이지만, JSON レスポンス를 요청할 수 있습니다:
+기본적으로 응답는 HTML이지만, JSON 응답를 요청할 수 있습니다:
 
 | Parameter | Description |
 |-----------|-------------|
-| `brd_json=1` | HTML 대신 JSON レスポンス를 반환합니다 |
+| `brd_json=1` | HTML 대신 JSON 응답를 반환합니다 |
 | `brd_json=html`	| JSON + 전체 중첩 HTML |
 
 **예시:** JSON 형식으로 호텔 가격 데이터를 가져옵니다:
